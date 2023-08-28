@@ -33,7 +33,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Introduction
 
-T
+This is a web-based patient management system for their Dental clinical's patients of AOH teaching unit of the dental faculty.This is an ongoing  project by a team of E18 Batch.Also this is a part of this project.This is mainly focus on recording the patient data,with more specific information related to their dental health.
 
 ## Other Sub Topics
 
