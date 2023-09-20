@@ -1,31 +1,28 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocaleController;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+ * Global Routes
+ *
+ * Routes that are used between both frontend and backend.
+ */
 
-Route::get('/', function () {
-    return view('welcome');
+// Switch between the included languages
+Route::get('lang/{lang}', [LocaleController::class, 'change'])->name('locale.change');
+
+/*
+ * Frontend Routes
+ */
+Route::group(['as' => 'frontend.'], function () {
+    includeRouteFiles(__DIR__.'/frontend/');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+/*
+ * Backend Routes
+ *
+ * These routes can only be accessed by users with type `admin`
+ */
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
+    includeRouteFiles(__DIR__.'/backend/');
 });
-
-require __DIR__.'/auth.php';
