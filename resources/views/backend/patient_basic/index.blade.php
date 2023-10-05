@@ -1,17 +1,17 @@
 @extends('backend.layouts.app')
 
-@section('title', __('Manage'))
+@section('title', __('Basic Patient Records'))
 
 @section('content')
     <div>
         <x-backend.card>
             <x-slot name="header">
-                Patient Basics
+                Basic Patient Records
             </x-slot>
 
             @if (1)
                 <x-slot name="headerActions">
-                    <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.patient_basic.create')" :text="__('Create Patient Basics')">
+                    <x-utils.link icon="c-icon cil-plus" class="card-header-action" :href="route('admin.patient_basic.create')" :text="__('Create Patient')">
                     </x-utils.link>
                 </x-slot>
             @endif
@@ -27,7 +27,7 @@
                     </div>
                 @endif
 
-                <livewire:backend.patient_basics />
+                <livewire:backend.patient-basic-table />
             </x-slot>
         </x-backend.card>
     </div>

@@ -10,18 +10,18 @@ class CreatePatientBasicsTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void           // $table->enum('type', ['info', 'danger', 'warning', 'success'])->default('info');
      */
-    public function up()
+    public function up()              
     {
         Schema::create('patient_basics', function (Blueprint $table) {
 
             $table->id();
             $table->string("reg_number", 8)->unique();
             $table->string("name");
-            $table->date("dob");
-            $table->date("initial_visit");
-            $table->enum("gender", array_keys(config('enums.gender')));
+            $table->timestamp("dob");
+            $table->timestamp("initial_visit");
+            $table->enum("gender", array_keys(config('enums.gender'))); 
             $table->enum("ethinicity", array_keys(config('enums.ethinicity')))->nullable();
             $table->enum("honorific", array_keys(config('enums.honorific')));
 
@@ -32,7 +32,7 @@ class CreatePatientBasicsTable extends Migration
             $table->string("guardian_name")->nullable();
             $table->string("guardian_tele", 12)->nullable();
             $table->text("guardian_address")->nullable();
-            $table->enum("guardian_relationship", array_keys(PatientBasic::GUARDIAN_RELATIONSHIPS))->nullable();
+            $table->enum("guardian_relationship", array_keys((config('enums.guardian_relationship'))))->nullable();
 
             $table->longText("presenting_complain_co")->nullable();
             $table->longText("presenting_complain_ho")->nullable();
