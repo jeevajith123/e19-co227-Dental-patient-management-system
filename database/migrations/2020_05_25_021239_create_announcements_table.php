@@ -24,7 +24,7 @@ class CreateAnnouncementsTable extends Migration
             $table->timestamps();
         });
     }
-                
+
     /**
      * Reverse the migrations.
      *

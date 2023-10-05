@@ -22,94 +22,88 @@ class PatientBasicController extends Controller
         $honorifics = PatientBasic::honorifics();
         $districts = PatientBasic::districts();
         $guardian_relationships = PatientBasic::guardian_relationships();
-        $entered_bys = PatientBasic::entered_bys();
-        return view('backend.patient_basic.create',compact('genders','ethnicities','honorifics','districts','guardian_relationships','entered_bys'));
+        return view('backend.patient_basic.create',compact('genders','ethnicities','honorifics','districts','guardian_relationships'));
     }
 
     //pasan made
+    
     public function store(Request $request)
-    {
-        $data = request()->validate([
-            'reg_number'=>'string|required',
-            'name'=>'string|required',
-            'dob' => 'required|date_format:Y-m-d\\TH:i',
-            'initial_visit' => 'required|date_format:Y-m-d\\TH:i',
-            'gender' => ['required', Rule::in(array_keys(PatientBasic::genders()))],
-            'ethnicity' => ['required', Rule::in(array_keys(PatientBasic::ethnicities()))],
-            'honorific' => ['required', Rule::in(array_keys(PatientBasic::honorifics()))],
-            'district' => ['required', Rule::in(array_keys(PatientBasic::districts()))],
-            'contact_address'=>'string|required',
-            'contact_tele'=>'string|required',
-            'guardian_name'=>'string|required',
-            'guardian_tele'=>'string|required',
-            'guardian_address'=>'string|required',
-            'guardian_relationship' => ['required', Rule::in(array_keys(PatientBasic::guardian_relationships()))],
-            'presenting_complain_co'=>'string|required',
-            'presenting_complain_ho'=>'string|required',
-            'medical_history'=>'string|required',
-            'current_medications'=>'string|required',
-            'special_referrals'=>'string|required',
-            'entered_by' => ['required', Rule::in(array_keys(PatientBasic::entered_bys()))],
-        ]);
+{;
+    $data = $request->validate([
+        'reg_number' => 'required|string|unique:patient_basics,reg_number|max:8',
+        'name' => 'required|string',
+        'dob' => 'required|date',
+        'initial_visit' => 'required|date',
+        'gender' => ['required', Rule::in(array_keys(config('enums.gender')))],
+        'ethinicity' => 'nullable|in:' . implode(',', array_keys(config('enums.ethinicity'))),
+        'honorific' => 'nullable|in:' . implode(',', array_keys(config('enums.honorific'))),
+        'district' => 'nullable|in:' . implode(',', array_keys(config('enums.district'))),
+        'contact_address' => 'nullable|string',
+        'contact_tele' => 'nullable|string|max:12',
+        'guardian_name' => 'nullable|string',
+        'guardian_tele' => 'nullable|string|max:12',
+        'guardian_address' => 'nullable|string',
+        'guardian_relationship' => 'nullable|in:' . implode(',', array_keys(PatientBasic::GUARDIAN_RELATIONSHIPS)),
+        'presenting_complain_co' => 'nullable|string',
+        'presenting_complain_ho' => 'nullable|string',
+        'medical_history' => 'nullable|string',
+        'current_medications' => 'nullable|string',
+        'special_referrals' => 'nullable|string',
+       
+    ]); 
 
-       try {
-            $patient_basic = new PatientBasic($data);
-            //$patient_basic->save();
-            
-            return print_r($data);
-            return redirect()->route('admin.patient_basic.index', $patient_basic)->with('Success', 'Patient details was created !');
-        } catch (\Exception $ex) {
-            return abort(500);
-        }
+    try {
+        $patientBasic = new PatientBasic($data);
+        $patientBasic->save();
+
+        return redirect()->route('admin.patient_basic.index')->with('success', 'Patient details were created successfully.');
+    } catch (\Exception $ex) {
+        // Handle exceptions, such as database errors
+       print_r('This is a error');
     }
-        
+}
 
 
     public function edit(PatientBasic $patientBasic)
     {
         $gender = PatientBasic::genders();
-        $ethnicities = PatientBasic::ethnicities();
-        $honorifics = PatientBasic::honorifics();
-        $districts = PatientBasic::districts();
-        $guardian_relationships = PatientBasic::guardian_relationships();
-        $entered_bys = PatientBasic::entered_bys();
-        return view('backend.patient_basic.edit', compact('patientBasic','genders','ethnicities','honorifics','districts','guardian_relationships','entered_bys'));
+        return view('backend.patient_basic.edit', compact('patientBasic','genders'));
     }
 
     public function update(Request $request, PatientBasic $patientBasic)
     {
-        $data = request()->validate([
-            'reg_number'=>'string|required',
-            'name'=>'string|required',
-            'dob' => 'required|date_format:Y-m-d\\TH:i',
-            'initial_visit' => 'required|date_format:Y-m-d\\TH:i',
-            'gender' => ['required', Rule::in(array_keys(PatientBasic::genders()))],
-            'ethnicity' => ['required', Rule::in(array_keys(PatientBasic::ethnicities()))],
-            'honorific' => ['required', Rule::in(array_keys(PatientBasic::honorifics()))],
-            'district' => ['required', Rule::in(array_keys(PatientBasic::districts()))],
-            'contact_address'=>'string|required',
-            'contact_tele'=>'string|required',
-            'guardian_name'=>'string|required',
-            'guardian_tele'=>'string|required',
-            'guardian_address'=>'string|required',
-            'guardian_relationship' => ['required', Rule::in(array_keys(PatientBasic::guardian_relationships()))],
-            'presenting_complain_co'=>'string|required',
-            'presenting_complain_ho'=>'string|required',
-            'medical_history'=>'string|required',
-            'current_medications'=>'string|required',
-            'special_referrals'=>'string|required',
-            'entered_by' => ['required', Rule::in(array_keys(PatientBasic::entered_bys()))],
+        $data = $request->validate([
+            'reg_number' => 'required|string|unique:patient_basics,reg_number,' . $patientBasic->id,
+            'name' => 'required|string',
+            'dob' => 'required|date',
+            'initial_visit' => 'required|date',
+            'gender' => ['required', Rule::in(array_keys(config('enums.gender')))],
+            'ethinicity' => 'nullable|in:' . implode(',', array_keys(config('enums.ethinicity'))),
+            'honorific' => 'nullable|in:' . implode(',', array_keys(config('enums.honorific'))),
+            'district' => 'nullable|in:' . implode(',', array_keys(config('enums.district'))),
+            'contact_address' => 'nullable|string',
+            'contact_tele' => 'nullable|string|max:12',
+            'guardian_name' => 'nullable|string',
+            'guardian_tele' => 'nullable|string|max:12',
+            'guardian_address' => 'nullable|string',
+            'guardian_relationship' => 'nullable|in:' . implode(',', array_keys(PatientBasic::GUARDIAN_RELATIONSHIPS)),
+            'presenting_complain_co' => 'nullable|string',
+            'presenting_complain_ho' => 'nullable|string',
+            'medical_history' => 'nullable|string',
+            'current_medications' => 'nullable|string',
+            'special_referrals' => 'nullable|string',
         ]);
-
+    
         try {
-            $patientBasic->enabled = ($request->enabled != null);
             $patientBasic->update($data);
-            return redirect()->route('admin.patient_basic.index')->with('Success', 'Record was updated !');
+    
+            return redirect()->route('admin.patient_basic.index')->with('success', 'Patient details were updated successfully.');
         } catch (\Exception $ex) {
-            return abort(500);
+            // Handle exceptions, such as database errors
+            return redirect()->route('admin.patient_basic.edit', $patientBasic)->with('error', 'An error occurred while updating the patient details.');
         }
-        
     }
+    
 
     public function delete(PatientBasic $patientBasic)
     {
@@ -118,11 +112,5 @@ class PatientBasicController extends Controller
 
     public function destroy(PatientBasic $patientBasic)
     {
-        try {
-            $patientBasic->delete();
-            return redirect()->route('admin.patient_basic.index')->with('Success', 'Patient Details was deleted !');
-        } catch (\Exception $ex) {
-            return abort(500);
-        }
     }
 }

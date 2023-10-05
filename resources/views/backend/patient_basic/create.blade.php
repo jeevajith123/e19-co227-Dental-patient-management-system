@@ -18,14 +18,16 @@
             </x-slot>
 
             <x-slot name="body">
-                @csrf
-                <div class="form-group row">
+    
+            <!--Reg_no-->
+            <div class="form-group row">
                     <label for="reg_number" class="col-md-2 col-form-label">@lang('Registration number')</label>
                     <div class="col-md-10">
                         <input type="text" name="reg_number" class="form-control" placeholder="{{ __('Regitration Number') }}" value="{{ old('reg_number') }}" maxlength="100" required />
                     </div>
                 </div>
 
+            <!--Name-->
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label">@lang('Name')</label>
                     <div class="col-md-10">
@@ -33,6 +35,7 @@
                     </div>
                 </div>
             
+            <!--Date Of Birth-->
                 <div class="form-group row">
                     {!! Form::label('dob', 'Date Of Birth', ['class' => 'col-md-2 col-form-label']) !!}
                     <div class="col-md-4 pt-3">
@@ -43,6 +46,7 @@
                     </div>
                 </div>
 
+            <!--Initial Visit-->
                 <div class="form-group row">
                     {!! Form::label('initial_visit', 'Initial Visit', ['class' => 'col-md-2 col-form-label']) !!}
                     <div class="col-md-4 pt-3">
@@ -53,6 +57,7 @@
                     </div>
                 </div>
 
+            <!--Gender-->
                 <div class="form-group row">
                     {!! Form::label('gender', 'Gender', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -63,8 +68,10 @@
                        @enderror
                    </div>
                </div>
-
-                <div class="form-group row">
+            
+            
+            <!--Ethinicity-->
+            <div class="form-group row">
                     {!! Form::label('ethnicity', 'Ethnicity', ['class' => 'col-md-2 col-form-label']) !!}
 
                    <div class="col-md-10">
@@ -75,6 +82,7 @@
                    </div>
                </div>
 
+            <!--Honorific-->
                 <div class="form-group row">
                     {!! Form::label('honorific', 'Honorific', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -86,6 +94,7 @@
                    </div>
                </div>
 
+            <!--District-->
                <div class="form-group row">
                 {!! Form::label('district', 'District', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -97,6 +106,7 @@
                </div>
            </div>
 
+            <!--Contact Address-->
                 <div class="form-group row">
                     {!! Form::label('contact_address', 'Contact Address', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -108,6 +118,7 @@
                     </div>
                 </div>
 
+            <!--Contact Telephone-->
                 <div class="form-group row">
                     <label for="contact_tele" class="col-md-2 col-form-label">@lang('Telephone')</label>
                     <div class="col-md-10">
@@ -115,6 +126,7 @@
                     </div>
                 </div>
 
+            <!--Guardian Name-->
                 <div class="form-group row">
                     <label for="guardian_name" class="col-md-2 col-form-label">@lang('Guardian Name')</label>
                     <div class="col-md-10">
@@ -122,13 +134,15 @@
                     </div>
                 </div>
 
+            <!--Guardian Telephone-->
                 <div class="form-group row">
                     <label for="guardian_tele" class="col-md-2 col-form-label">@lang('Guardian Telephone')</label>
                     <div class="col-md-10">
                         <input type="text" name="guardian_tele" class="form-control" placeholder="{{ __('Guardian Telephone') }}" value="{{ old('guardian_tele') }}" maxlength="100" required />
                     </div>
-                </div>                     
-                
+                </div> 
+
+            <!--Guardian Address-->
                 <div class="form-group row">
                     {!! Form::label('guardian_address', 'Guardian Address', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -140,6 +154,7 @@
                     </div>
                 </div>
 
+            <!--Guardian Relationship-->
                 <div class="form-group row">
                     {!! Form::label('guardian_relationship', 'Guardian Relationship', ['class' => 'col-md-2 col-form-label']) !!}
     
@@ -151,6 +166,7 @@
                    </div>
                </div>
 
+            <!--Presenting Complain Co-->
                 <div class="form-group row">
                     {!! Form::label('presenting_complain_co', 'presenting_complain_co', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -162,6 +178,7 @@
                     </div>
                 </div>
 
+            <!--Presenting Complain Ho-->
                 <div class="form-group row">
                     {!! Form::label('presenting_complain_ho', 'presenting_complain_ho', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -173,6 +190,7 @@
                     </div>
                 </div>
 
+            <!--Medicle History-->
                 <div class="form-group row">
                     {!! Form::label('medical_history', 'Medical History', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -184,6 +202,7 @@
                     </div>
                 </div>
 
+             <!--Current Medifications-->
                 <div class="form-group row">
                     {!! Form::label('current_medications', 'Current Medications', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -195,6 +214,7 @@
                     </div>
                 </div>
 
+             <!--Special Refferals-->
                 <div class="form-group row">
                     {!! Form::label('special_referrals', 'Special Referrals', ['class' => 'col-md-2 col-form-label']) !!}
 
@@ -206,17 +226,8 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
-                    {!! Form::label('entered_by', 'Entered By', ['class' => 'col-md-2 col-form-label']) !!}
-    
-                   <div class="col-md-10">
-                       {!! Form::select('entered_by', $entered_bys, null, ['class'=>'form-control', 'required'=>true, 'placeholder' => '']) !!}
-                       @error('entered_by')
-                       <strong>{{ $message }}</strong>
-                       @enderror
-                   </div>
-               </div>
             
+
             </x-slot>
 
             <x-slot name="footer">

@@ -14,8 +14,7 @@ class PatientBasicFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->String,
-            'reg_no' => $this->faker->String,
+            //
         ];
     }
 }

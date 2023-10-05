@@ -6,13 +6,13 @@ use App\Http\Controllers\Backend\PatientBasicController;
 Route::group(['prefix' => 'patients/basic'], function () {
 
     Route::get('/', [PatientBasicController::class, 'index'])->name('patient_basic.index')
-      ->breadcrumbs(function (Trail $trail) {
-        $trail->push(__('Home'), route('admin.dashboard'))
-            ->push(__('Patients - Basic'), route('admin.patient_basic.index'));
-    });
+        ->breadcrumbs(function (Trail $trail) {
+            $trail->push(__('Home'), route('admin.dashboard'))
+                ->push(__('Patients - Basic'), route('admin.patient_basic.index'));
+        });
 
     // Create
-    Route::get('patient_basic/create', [PatientBasicController::class, 'create'])
+    Route::get('/create', [PatientBasicController::class, 'create'])
         ->name('patient_basic.create')
         ->breadcrumbs(function (Trail $trail) {
             $trail->push(__('Home'), route('admin.dashboard'))
@@ -21,7 +21,7 @@ Route::group(['prefix' => 'patients/basic'], function () {
         });
 
     // Store
-    Route::post('/', [PatientBasicController::class, 'store'])  //made changes
+    Route::post('/', [PatientBasicController::class, 'store'])
         ->name('patient_basic.store');
 
     // Edit
