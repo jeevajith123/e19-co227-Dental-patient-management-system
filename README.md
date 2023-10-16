@@ -4,7 +4,7 @@
 
 ## Team of Developers
 
--   [Adeepa Fernando](https://people.ce.pdn.ac.lk/students/e18/100/)
+
 -   [Haritha Gunarathna](https://people.ce.pdn.ac.lk/students/e18/118/)
 -   [Jayathri Madhushika Ranasinghe](https://people.ce.pdn.ac.lk/students/e18/283/)
 -   [Nuwan Jaliyagoda](http://github.com/NuwanJ)
