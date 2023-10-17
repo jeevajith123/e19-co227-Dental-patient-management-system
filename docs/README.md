@@ -62,7 +62,7 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 
 ## Tech Stack
 
-### <u>Front End</u>
+### Front End
 <img src="images/Bootstrap%20and%20vue%20js.webp" width=500 />
 
 #### Bootstrap :
@@ -70,6 +70,23 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 
 #### Vue js :
 - Vue js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
+
+### Back End
+<img src="images/laravel%20and%20php.jpeg" width=350 />
+
+#### Laravel :
+- Laravel is a free and open-source PHP web framework,intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.
+
+#### PHP :
+- PHP is a general-purpose scripting language geared towards web development.
+
+### Database
+<img src="images/Mysql.png" width=350 />
+
+#### MySQL :
+- MySQL is an open-source relational database management system.
+
+
 
  
 ## Links
