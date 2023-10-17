@@ -34,6 +34,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Introduction
 
+
 ### About
 The Faculty of Science at the University of Peradeniya has developed a dental patient management system for use at the Peradeniya Hospital. However, it has been identified that the current system does not fully meet the requirements of the Dental Clinic. Consequently, the Dental Faculty has entrusted us with the task of developing an improved system.
 
@@ -61,6 +62,7 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 - Automation Of Workflow
 
 ## Tech Stack
+
 
 ### Front End
 <img src="images/Bootstrap%20and%20vue%20js.webp" width=500 />
