@@ -67,10 +67,10 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 #### Bootstrap :
 - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
 
-#### Vue.js :
--Vue.js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
+#### Vue js :
+- Vue js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
 
-
+ 
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
