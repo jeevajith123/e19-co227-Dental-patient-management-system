@@ -3,8 +3,8 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
-title:
+repository-name: e19-co227-TecHub-help-desk-ticketing-system 
+title:#Dental patient management system —
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
@@ -20,9 +20,10 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E19227, Madhushanka M.P.J, [e19227@eng.pdn.ac.lk](mailto:name@email.com)
+-  E19091, Dissanayake P.A.M, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
+-  E19304, Pushpakumara R.M.S.P, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
+-  E19264, Nishantha R.P.T, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
