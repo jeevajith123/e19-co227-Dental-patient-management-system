@@ -33,6 +33,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 ---
 
 ## Introduction
+
 ### About
 The Faculty of Science at the University of Peradeniya has developed a dental patient management system for use at the Peradeniya Hospital. However, it has been identified that the current system does not fully meet the requirements of the Dental Clinic. Consequently, the Dental Faculty has entrusted us with the task of developing an improved system.
 
@@ -61,7 +62,14 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 
 ## Tech Stack
 
-### Front End
+### <u>Front End</u>
+
+#### Bootstrap :
+- Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+
+#### Vue.js :
+-Vue.js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
+
 
 ## Links
 
