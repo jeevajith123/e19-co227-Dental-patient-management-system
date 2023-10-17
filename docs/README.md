@@ -3,7 +3,7 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: e19-co227-TecHub-help-desk-ticketing-system 
+repository-name: e19-co227-Dental-patient-management-system
 title:#Dental patient management system —
 ---
 
@@ -20,10 +20,10 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  E19227, Madhushanka M.P.J, [e19227@eng.pdn.ac.lk](mailto:name@email.com)
--  E19091, Dissanayake P.A.M, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
--  E19304, Pushpakumara R.M.S.P, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
--  E19264, Nishantha R.P.T, [e19091@eng.pdn.ac.lk](mailto:name@email.com)
+-  E19227, Madhushanka M.P.J, [email](mailto:name@email.com)
+-  E19091, Dissanayake P.A.M, [email](mailto:name@email.com)
+-  E19304, Pushpakumara R.M.S.P, [email](mailto:name@email.com)
+-  E19264, Nishantha R.P.T, [email](mailto:name@email.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -37,7 +37,7 @@ This is a sample image, to show how to add images to your page. To learn more op
  description of the real world problem and solution, impact
 
 ## Other Sub Topics
-123
+
 .....
 
 ## Links
