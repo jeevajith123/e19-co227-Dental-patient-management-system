@@ -27,7 +27,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
+2. [Tech Stack](#tech-stack)
 3. [Links](#links)
 
 ---
@@ -60,6 +60,8 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 - Automation Of Workflow
 
 ## Tech Stack
+
+### <u>Front End</u>
 
 ## Links
 
