@@ -33,8 +33,10 @@ This is a sample image, to show how to add images to your page. To learn more op
 ---
 
 ## Introduction
+### About
+The Faculty of Science at the University of Peradeniya has developed a dental patient management system for use at the Peradeniya Hospital. However, it has been identified that the current system does not fully meet the requirements of the Dental Clinic. Consequently, the Dental Faculty has entrusted us with the task of developing an improved system.
 
-There is a dental patinet management system which is built by Faculty of science University of peradeniya in the Peradeniya Hospital.But it is not enough for the Dental clinic.Hence Dental faculty asked from us to developed this system.Our solution, Dental Patient management, is a streamlined and user-friendly web application designed to automate and simplify the patient data collection and  collaboration process. This is created by E18 Batch and us.Our part is only Dental patient management part.
+Our solution, known as "Dental Patient Management," is a web-based application that has been meticulously designed to enhance efficiency and user-friendliness. Its primary aim is to automate and streamline the collection and collaboration of patient data. This application has been developed collaboratively by the E18 Batch and our team, with our specific focus on the dental patient management component.
 
 ## Challenges of current System
 - Unefficiency In Data Collection
