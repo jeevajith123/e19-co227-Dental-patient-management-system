@@ -61,7 +61,7 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 
 ## Tech Stack
 
-### <u>Front End</u>
+### Front End
 
 ## Links
 
