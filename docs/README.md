@@ -63,7 +63,7 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 ## Tech Stack
 
 ### <u>Front End</u>
-<img src="https://github.com/cepdnaclk/e19-co227-Dental-patient-management-system/blob/main/docs/images/Bootstrap%20and%20vue%20js.webp" width=800 />
+<img src="https://github.com/cepdnaclk/e19-co227-Dental-patient-management-system/blob/main/docs/images/Bootstrap%20and%20vue%20js.webp" width=500 />
 
 #### Bootstrap :
 - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
