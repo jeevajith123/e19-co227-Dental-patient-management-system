@@ -38,7 +38,7 @@ The Faculty of Science at the University of Peradeniya has developed a dental pa
 
 Our solution, known as "Dental Patient Management," is a web-based application that has been meticulously designed to enhance efficiency and user-friendliness. Its primary aim is to automate and streamline the collection and collaboration of patient data. This application has been developed collaboratively by the E18 Batch and our team, with our specific focus on the dental patient management component.
 
-## Challenges of current System
+### Challenges of current System
 - Unefficiency In Data Collection
 - Difficulty To Get Relevant Data
 - Misplacement Risks
@@ -49,7 +49,7 @@ Our solution, known as "Dental Patient Management," is a web-based application t
 - Time Consuming Documentation
 - Patient Experience
 
-## Why Management
+### Why Management
 - Improved Patient Care
 - Efficient Faculty Management
 - Security And Data Integrity
