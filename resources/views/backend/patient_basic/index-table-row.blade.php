@@ -1,6 +1,10 @@
 <x-livewire-tables::table.cell>
+    {{ $row->id }}
+</x-livewire-tables::table.cell>
+<x-livewire-tables::table.cell>
     {{ $row->reg_number }}
 </x-livewire-tables::table.cell>
+
 
 <x-livewire-tables::table.cell>
     <div class="d-flex px-0 mt-0 mb-0">
