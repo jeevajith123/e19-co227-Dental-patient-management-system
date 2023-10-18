@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\LocaleController;
-
+use App\Models\Patient\PatientBasic;
 /*
  * Global Routes
  *
@@ -25,4 +25,11 @@ Route::group(['as' => 'frontend.'], function () {
  */
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'admin'], function () {
     includeRouteFiles(__DIR__.'/backend/');
+});
+
+Route::group(['prefix' => 'patient', 'as' => 'patient.', 'middleware' => 'auth'], function () {
+    Route::get('create', [PatientController::class, 'create'])->name('create'); // Show the patient creation form
+    Route::post('store', [PatientController::class, 'store'])->name('store'); // Store a new patient
+    Route::get('list', [PatientController::class, 'list'])->name('list'); // List all patients
+    // Add more patient-related routes as needed
 });
