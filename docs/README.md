@@ -27,16 +27,20 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
+2. [Tech Stack](#tech-stack)
 3. [Links](#links)
 
 ---
 
 ## Introduction
 
-There is a dental patinet management system which is built by Faculty of science University of peradeniya in the Peradeniya Hospital.But it is not enough for the Dental clinic.Hence Dental faculty asked from us to developed this system.Our solution, Dental Patient management, is a streamlined and user-friendly web application designed to automate and simplify the patient data collection and  collaboration process. This is created by E18 Batch and us.Our part is only Dental patient management part.
 
-## Challenges of current System
+### About
+The Faculty of Science at the University of Peradeniya has developed a dental patient management system for use at the Peradeniya Hospital. However, it has been identified that the current system does not fully meet the requirements of the Dental Clinic. Consequently, the Dental Faculty has entrusted us with the task of developing an improved system.
+
+Our solution, known as "Dental Patient Management," is a web-based application that has been meticulously designed to enhance efficiency and user-friendliness. Its primary aim is to automate and streamline the collection and collaboration of patient data. This application has been developed collaboratively by the E18 Batch and our team, with our specific focus on the dental patient management component.
+
+### Challenges of current System
 - Unefficiency In Data Collection
 - Difficulty To Get Relevant Data
 - Misplacement Risks
@@ -47,7 +51,7 @@ There is a dental patinet management system which is built by Faculty of science
 - Time Consuming Documentation
 - Patient Experience
 
-## Why Management
+### Why Management
 - Improved Patient Care
 - Efficient Faculty Management
 - Security And Data Integrity
@@ -59,6 +63,34 @@ There is a dental patinet management system which is built by Faculty of science
 
 ## Tech Stack
 
+
+### Front End
+<img src="images/Bootstrap%20and%20vue%20js.webp" width=500 />
+
+#### Bootstrap :
+- Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+
+#### Vue js :
+- Vue js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
+
+### Back End
+<img src="images/laravel%20and%20php.jpeg" width=350 />
+
+#### Laravel :
+- Laravel is a free and open-source PHP web framework,intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.
+
+#### PHP :
+- PHP is a general-purpose scripting language geared towards web development.
+
+### Database
+<img src="images/Mysql.png" width=350 />
+
+#### MySQL :
+- MySQL is an open-source relational database management system.
+
+
+
+ 
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
