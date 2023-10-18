@@ -70,7 +70,7 @@
             </li>
         @endif
         @if ($logged_in_user->hasAllAccess())
-            {{-- Announcements --}}
+            {{-- Announcements 
             <li class="c-sidebar-nav-dropdown">
                 <x-utils.link href="#" icon="c-sidebar-nav-icon cil-list" class="c-sidebar-nav-dropdown-toggle"
                     :text="__('Announcements')"></x-utils.link>
@@ -81,7 +81,7 @@
                             :active="activeClass(Route::is('admin.announcements.*'), 'c-active')"></x-utils.link>
                     </li>
                 </ul>
-            </li>
+            </li>  --}}
         @endif
 
         @if ($logged_in_user->hasAllAccess())
@@ -92,7 +92,7 @@
 
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item">
-                        <x-utils.link :href="route('admin.patient_basic.index')" class="c-sidebar-nav-link" :text="__('Manage')"
+                        <x-utils.link :href="route('admin.patient_basic.index')" class="c-sidebar-nav-link" :text="__('Basics')"
                             :active="activeClass(Route::is('admin.patient_basic.*'), 'c-active')"></x-utils.link>
                     </li>
                 </ul>

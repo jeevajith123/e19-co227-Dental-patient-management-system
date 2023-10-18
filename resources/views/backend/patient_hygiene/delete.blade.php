@@ -6,12 +6,12 @@
     <div>
         <x-backend.card>
             <x-slot name="header">
-                Basic Habit Records: Delete | {{ $patientHygiene->id }}
+                Basic Habit Records: Delete | {{ $patientHygiene->patient_id }}
             </x-slot>
 
             <x-slot name="body">
                 <p>Are you sure you want to delete the patient habits record for
-                    <strong><i>"{{ $patientHygiene->id }}"</i></strong>?
+                    <strong><i>"{{ $patientHygiene->patient_id }}"</i></strong>?
                 </p>
                 <div class="d-flex">
                     {!! Form::open([

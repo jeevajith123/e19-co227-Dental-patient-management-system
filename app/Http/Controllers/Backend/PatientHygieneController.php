@@ -97,7 +97,7 @@ class PatientHygieneController extends Controller
     {
         try {
             $patientHygiene->delete();
-            return redirect()->route('admin.patient_hygiene.index')->with('success', 'Patient Habits record was deleted successfully!');
+            return redirect()->route('admin.patient_hygiene.index')->with('success', 'Patient Hygiene record was deleted successfully!');
         } catch (\Exception $ex) {
             return abort(500);
         }

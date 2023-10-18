@@ -21,7 +21,7 @@ class CreatePatientBasicsTable extends Migration
             $table->string("name");
             $table->date("dob");
             $table->date("initial_visit");
-            $table->enum("gender", array_keys(config('enums.gender')));
+            $table->enum("gender", array_keys(config('enums.gender')));  
             $table->enum("ethinicity", array_keys(config('enums.ethinicity')))->nullable();
             $table->enum("honorific", array_keys(config('enums.honorific')));
 

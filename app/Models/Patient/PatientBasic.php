@@ -46,13 +46,11 @@ class PatientBasic extends Model
         'patient'=>'Patient',
         'other'=>'Other',
     ];
-
-    //
     protected $dates=[
         'dob',
         'initial_visit',
     ];
-    //
+ 
 
     public function habits()
     {
@@ -69,7 +67,7 @@ class PatientBasic extends Model
         // TODO: implement 
     }
 
-    //
+
     public static function genders()
     {
         return [

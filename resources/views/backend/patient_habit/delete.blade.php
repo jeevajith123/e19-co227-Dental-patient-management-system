@@ -6,7 +6,7 @@
     <div>
         <x-backend.card>
             <x-slot name="header">
-                Basic Habit Records: Delete | {{ $patientHabits->id }}
+                Basic Habit Records: Delete | {{ $patientHabits->patient_id }}
             </x-slot>
 
             <x-slot name="body">
