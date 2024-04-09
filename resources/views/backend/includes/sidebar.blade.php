@@ -70,7 +70,7 @@
             </li>
         @endif
         @if ($logged_in_user->hasAllAccess())
-            {{-- Announcements 
+            {{-- Announcements --}}
             <li class="c-sidebar-nav-dropdown">
                 <x-utils.link href="#" icon="c-sidebar-nav-icon cil-list" class="c-sidebar-nav-dropdown-toggle"
                     :text="__('Announcements')"></x-utils.link>
@@ -81,7 +81,7 @@
                             :active="activeClass(Route::is('admin.announcements.*'), 'c-active')"></x-utils.link>
                     </li>
                 </ul>
-            </li>  --}}
+            </li>
         @endif
 
         @if ($logged_in_user->hasAllAccess())

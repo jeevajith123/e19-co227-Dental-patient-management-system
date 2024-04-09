@@ -158,7 +158,7 @@
                        @enderror
                     </div>
                 </div>
-                 <!--Toothpaste**-->
+
 
             </x-slot>
 

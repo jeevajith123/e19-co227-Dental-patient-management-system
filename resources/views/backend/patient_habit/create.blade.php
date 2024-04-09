@@ -161,7 +161,7 @@
 
                 <!--Updated Information-->
                 <div class="form-group row">
-                    {!! Form::label('updated_user', 'Updated Information', ['class' => 'col-md-2 col-form-label']) !!}
+                    {!! Form::label('updated_user', 'Updated Information-', ['class' => 'col-md-2 col-form-label']) !!}
 
                     <div class="col-md-10">
                          {!! Form::textarea('updated_user', '', ['class'=>'form-control', 'rows'=>3, 'required'=>true, 'placeholder' => 'Admin-1 / User-2']) !!}

@@ -25,7 +25,7 @@
                         <a href="{{ route('admin.patient_habit.index') }}" class="btn btn-light mr-2">Back</a>
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
                     {!! Form::close() !!}
-                </div>
+                </div>    
             </x-slot>
         </x-backend.card>
     </div>
