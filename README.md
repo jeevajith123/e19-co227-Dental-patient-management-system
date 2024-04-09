@@ -1,130 +1,99 @@
-# Dental Patient Management System
+---
+layout: home
+permalink: index.html
 
-[![Laravel](https://github.com/cepdnaclk/dental-patient-management-system/actions/workflows/laravel.yml/badge.svg)](https://github.com/cepdnaclk/dental-patient-management-system/actions/workflows/laravel.yml)
+# Please update this with your repository name and title
+repository-name: e19-co227-Dental-patient-management-system
+title: Dental patient management system
+---
 
-## Team of Developers
+[comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
--   [Adeepa Fernando](https://people.ce.pdn.ac.lk/students/e18/100/)
--   [Haritha Gunarathna](https://people.ce.pdn.ac.lk/students/e18/118/)
--   [Jayathri Madhushika Ranasinghe](https://people.ce.pdn.ac.lk/students/e18/283/)
--   [Nuwan Jaliyagoda](http://github.com/NuwanJ)
+# Dental patient management system
 
-## Useful Commands and Instructions
+---
 
-You need to install WAMP or XAMP server and run it before following commands.
-Please make sure you already created a Database and a Database User Account.
+<!-- 
+This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
 
-#### Install Dependencies
+![Sample Image](./images/sample.png)
+ -->
 
-```
-// Install PHP dependencies
-composer install
+## Team
+-  E19227, Madhushanka M.P.J, [email](e19227@eng.pdn.ac.lk)
+-  E19091, Dissanayake P.A.M, [email](19091@eng.pdn.ac.lk)
+-  E19304, Pushpakumara R.M.S.P, [email](19304@eng.pdn.ac.lk)
+-  E19264, Nishantha R.P.T, [email](19264@eng.pdn.ac.lk)
 
-// Install Node dependencies (development mode)
-npm install
-npm run dev
-```
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Tech Stack](#tech-stack)
+3. [Links](#links)
 
-##### Additional useful commands
+---
 
-```
-// If you received mmap() error, use this command
-php -d memory_limit=-1 /usr/local/bin/composer install
+## Introduction
 
-// Update PHP dependencies
-composer update
 
-// Prepare the database
-php artisan migrate
-```
+### About
+The Faculty of Science at the University of Peradeniya has developed a dental patient management system for use at the Peradeniya Hospital. However, it has been identified that the current system does not fully meet the requirements of the Dental Clinic. Consequently, the Dental Faculty has entrusted us with the task of developing an improved system.
 
-#### Prepare for the first run
+Our solution, known as "Dental Patient Management," is a web-based application that has been meticulously designed to enhance efficiency and user-friendliness. Its primary aim is to automate and streamline the collection and collaboration of patient data. This application has been developed collaboratively by the E18 Batch and our team, with our specific focus on the dental patient management component.
 
-First you need to copy `.env.example` and save as `.env` in the root folder, and change the `Admin` and `User` credentials, `Database` configurations.
+### Challenges of current System
+- Unefficiency In Data Collection
+- Difficulty To Get Relevant Data
+- Misplacement Risks
+- Data Inaccuracy And Errors
+- Data Duplication
+- Limited Accessibility
+- Security And Privacy Concerns
+- Time Consuming Documentation
+- Patient Experience
 
-Next follow the below commands
+### Why Management
+- Improved Patient Care
+- Efficient Faculty Management
+- Security And Data Integrity
+- Reduced Errors And Clarity
+- Streamlined Communication
+- Time And Cost Saving
+- User Friendly Interface
+- Automation Of Workflow
 
-```
-// Prepare the public link for storage
-php artisan storage:link
+## Tech Stack
 
-// Reset the database and seed the data
-php artisan migrate:fresh --seed
 
-// Prepare webhook for unit testing
-git config --local core.hooksPath .githooks
+### Front End
+<img src="images/Bootstrap%20and%20vue%20js.webp" width=500 />
 
-```
-### Generate encryption key
-```
-// For "No application encryption key has been specified." runtime error
-php artisan key:generate
+#### Bootstrap :
+- Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
 
-// If error still exists
-php artisan config:cache
-```
+#### Vue js :
+- Vue js is an open-source model–view–viewmodel front end JavaScript library for building user interfaces and single-page applications.
 
-#### Serve in the Local environment
+### Back End
+<img src="images/laravel%20and%20php.jpeg" width=350 />
 
-```
-// Serve PHP web server
-php artisan serve
+#### Laravel :
+- Laravel is a free and open-source PHP web framework,intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.
 
-// Serve PHP web server, in a specific IP & port
-php artisan serve --host=0.0.0.0 --port=8000
+#### PHP :
+- PHP is a general-purpose scripting language geared towards web development.
 
-// To work with Vue components, you need to run this in parallel
-npm run watch
-```
+### Database
+<img src="images/Mysql.png" width=350 />
 
-#### Cache and optimization
+#### MySQL :
+- MySQL is an open-source relational database management system.
 
-```
-// Remove dev dependencies
-composer install --optimize-autoloader --no-dev
 
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
 
-php artisan config:clear
-php artisan route:clear
-php artisan view:clear
-```
+ 
+## Links
 
-#### Maintenance related commands
-
-```
-php artisan down --message="{Message}" --retry=60
-php artisan up
-```
-
-#### Other useful instructions
-
-```
-// Create Model, Controller and Database Seeder
-php artisan make:model {name} --migration --controller --seed
-
-// Create a Email
-php artisan make:mail -m
-
-// Commandline interface for Database Operations
-php artisan tinker
-
-// Run the unit tests
-php artisan test
-
-```
-
-#### Resource Routes - Standardard Pattern
-
-| Verb   | URI                    | Action  | Route Name     |
-| :----- | :--------------------- | :------ | :------------- |
-| GET    | /photos/               | index   | photos.index   |
-| GET    | /photos/create         | create  | photos.create  |
-| GET    | /photos/view/{photo}   | show    | photos.show    |
-| GET    | /photos/edit/{photo}   | edit    | photos.edit    |
-| GET    | /photos/delete/{photo} | delete  | photos.delete  |
-| POST   | /photos/               | store   | photos.store   |
-| PUT    | /photos/{photo}        | update  | photos.update  |
-| DELETE | /photos/{photo}        | destroy | photos.destroy |
+- [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
+- [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)
